@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		D26556CB1DB0DEBE00465081 /* Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26556C11DB0DEBE00465081 /* Alert.framework */; };
 		D26556D01DB0DEBE00465081 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26556CF1DB0DEBE00465081 /* AlertTests.swift */; };
-		D26556D21DB0DEBE00465081 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = D26556C41DB0DEBE00465081 /* Alert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D26556DE1DB0E1CC00465081 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = D26556DC1DB0E1CC00465081 /* Alert.h */; };
+		D26556E31DB0E26300465081 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26556E11DB0E26300465081 /* AlertVC.swift */; };
+		D26556E41DB0E26300465081 /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26556E21DB0E26300465081 /* AlertVC.xib */; };
+		D26556E61DB0E5D300465081 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26556E51DB0E5D300465081 /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +27,14 @@
 
 /* Begin PBXFileReference section */
 		D26556C11DB0DEBE00465081 /* Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D26556C41DB0DEBE00465081 /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
-		D26556C51DB0DEBE00465081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D26556CA1DB0DEBE00465081 /* AlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26556CF1DB0DEBE00465081 /* AlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
 		D26556D11DB0DEBE00465081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26556DC1DB0E1CC00465081 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Alert.h; path = "Supporting Files/Alert.h"; sourceTree = "<group>"; };
+		D26556DD1DB0E1CC00465081 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		D26556E11DB0E26300465081 /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertVC.swift; path = AlertVC/AlertVC.swift; sourceTree = "<group>"; };
+		D26556E21DB0E26300465081 /* AlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertVC.xib; path = AlertVC/AlertVC.xib; sourceTree = "<group>"; };
+		D26556E51DB0E5D300465081 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,9 @@
 		D26556C31DB0DEBE00465081 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				D26556C41DB0DEBE00465081 /* Alert.h */,
-				D26556C51DB0DEBE00465081 /* Info.plist */,
+				D26556E51DB0E5D300465081 /* AlertHelper.swift */,
+				D26556E01DB0E25400465081 /* AlertVC */,
+				D26556DB1DB0E1A000465081 /* Supporting Files */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -86,6 +93,24 @@
 			path = AlertTests;
 			sourceTree = "<group>";
 		};
+		D26556DB1DB0E1A000465081 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D26556DC1DB0E1CC00465081 /* Alert.h */,
+				D26556DD1DB0E1CC00465081 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D26556E01DB0E25400465081 /* AlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				D26556E11DB0E26300465081 /* AlertVC.swift */,
+				D26556E21DB0E26300465081 /* AlertVC.xib */,
+			);
+			name = AlertVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +118,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26556D21DB0DEBE00465081 /* Alert.h in Headers */,
+				D26556DE1DB0E1CC00465081 /* Alert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +174,7 @@
 					D26556C01DB0DEBE00465081 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = HW27H6H98R;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					D26556C91DB0DEBE00465081 = {
@@ -181,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26556E41DB0E26300465081 /* AlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26556E61DB0E5D300465081 /* AlertHelper.swift in Sources */,
+				D26556E31DB0E26300465081 /* AlertVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +351,7 @@
 		D26556D61DB0DEBE00465081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HW27H6H98R;
@@ -334,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Alert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +372,7 @@
 		D26556D71DB0DEBE00465081 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HW27H6H98R;
@@ -360,6 +392,7 @@
 		D26556D91DB0DEBE00465081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HW27H6H98R;
 				INFOPLIST_FILE = AlertTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +405,7 @@
 		D26556DA1DB0DEBE00465081 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HW27H6H98R;
 				INFOPLIST_FILE = AlertTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +434,7 @@
 				D26556D71DB0DEBE00465081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D26556D81DB0DEBE00465081 /* Build configuration list for PBXNativeTarget "AlertTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +443,7 @@
 				D26556DA1DB0DEBE00465081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
