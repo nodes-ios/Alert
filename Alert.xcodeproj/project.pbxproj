@@ -362,7 +362,7 @@
 				PRODUCT_NAME = Alert;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -383,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Alert;
 				PRODUCT_NAME = Alert;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = "";
 			};
 			name = Release;
 		};
