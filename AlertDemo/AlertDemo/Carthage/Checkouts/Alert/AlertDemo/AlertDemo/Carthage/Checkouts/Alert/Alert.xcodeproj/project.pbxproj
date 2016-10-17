@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D26556CB1DB0DEBE00465081 /* Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26556C11DB0DEBE00465081 /* Alert.framework */; };
 		D26556D01DB0DEBE00465081 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26556CF1DB0DEBE00465081 /* AlertTests.swift */; };
-		D26556DE1DB0E1CC00465081 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = D26556DC1DB0E1CC00465081 /* Alert.h */; };
+		D26556DE1DB0E1CC00465081 /* Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = D26556DC1DB0E1CC00465081 /* Alert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D26556E31DB0E26300465081 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26556E11DB0E26300465081 /* AlertVC.swift */; };
 		D26556E41DB0E26300465081 /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26556E21DB0E26300465081 /* AlertVC.xib */; };
 /* End PBXBuildFile section */
