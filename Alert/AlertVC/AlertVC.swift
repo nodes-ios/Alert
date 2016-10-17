@@ -40,6 +40,7 @@ class AlertVC: UIViewController {
     var subLabelFont: UIFont?
     var extraSubLabelFont: UIFont?
     var buttonFont: UIFont?
+    var bottomExtraButtonFont: UIFont?
     
     var backgroundColor: UIColor = UIColor.white
     var okButtonBackgroundColor: UIColor = UIColor.white
@@ -193,6 +194,14 @@ class AlertVC: UIViewController {
         label.font = labelFont
         subLabel.font = subLabelFont
         extraSublabel.font = extraSubLabelFont
+        
+        if shouldShowBottomExtraButton {
+            bottomExtraButton.setTitle(bottomExtraButtonText, for: .normal)
+            bottomExtraButton.titleLabel?.font = bottomExtraButtonFont
+        }
+        else {
+            bottomExtraButton.alpha = 0
+        }
         
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         

@@ -25,6 +25,13 @@ class ViewController: UIViewController {
         alert.forcedAlert = true
         alert.cornerRadius = 20
         alert.labelFont = UIFont.boldSystemFont(ofSize: 40)
+        alert.shouldShowBottomExtraButton = true
+        
+        alert.bottomExtraButtonText = "Footer"
+        alert.bottomExtraButtonFont = UIFont.boldSystemFont(ofSize: 40)
+        alert.bottomExtraButtonCompletion = {
+            print("footer pressed")
+        }
         alert.showAlert()
     }
 
