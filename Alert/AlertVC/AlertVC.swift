@@ -64,7 +64,9 @@ class AlertVC: UIViewController {
     @IBOutlet weak var subLabelHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var subLabelBottomConstraint: NSLayoutConstraint!
     
-    public func initWith(title:String?, subText:String?, image:UIImage?, okTitle:String?, cancelTitle:String?, bottomExtraButtonTitle:String?, forced:Bool, okCompletion:(() -> Void)?, cancelCompletion:(() -> Void)?, bottomExtraButtonCompletion:(() -> Void)?, backgroundColor: UIColor?, buttonColors: UIColor?) -> AlertVC {
+    
+    //MARK: init Helpers
+    public func setupWith(title:String?, subText:String?, image:UIImage?, okTitle:String?, cancelTitle:String?, bottomExtraButtonTitle:String?, forced:Bool, okCompletion:(() -> Void)?, cancelCompletion:(() -> Void)?, bottomExtraButtonCompletion:(() -> Void)?, backgroundColor: UIColor?, buttonColors: UIColor?) {
         
         let alert = AlertVC(nibName: "AlertVC", bundle: nil)
         
@@ -99,9 +101,35 @@ class AlertVC: UIViewController {
             alert.okButtonBackgroundColor = buttonColors
             alert.cancelButtonBackgroundColor = buttonColors
         }
-        
-        return alert
     }
+    
+    public func showForceAlert(title:String, okTitle:String?, cancelTitle:String?, okCompletion:(() -> Void)?, cancelCompletion:(() -> Void)?) {
+        
+        AlertVC.alertShown = false
+        
+        let alert = AlertVC(nibName: "AlertVC", bundle: nil)
+        
+        alert.labelText = title
+        alert.forcedAlert = true
+        if let okTitle = okTitle {
+            alert.okButtonText = okTitle
+        }
+        if let cancelTitle = cancelTitle {
+            alert.cancelButtonText = cancelTitle
+        }
+        
+        alert.okCompletion = okCompletion
+        alert.cancelCompletion = cancelCompletion
+        
+        alert.showAlert()
+    }
+    
+    public func showError(message:String, forced:Bool) {
+        
+        self.showForceAlert(title: message, okTitle: nil, cancelTitle: nil, okCompletion: nil, cancelCompletion: nil)
+    }
+    
+    //MARK: Setup & Display
     
     func showAlert() {
         
