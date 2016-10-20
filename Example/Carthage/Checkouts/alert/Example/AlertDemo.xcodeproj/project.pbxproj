@@ -14,8 +14,8 @@
 		D26556FE1DB0E97E00465081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26556FC1DB0E97E00465081 /* LaunchScreen.storyboard */; };
 		D26557091DB0E97E00465081 /* AlertDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26557081DB0E97E00465081 /* AlertDemoTests.swift */; };
 		D26557141DB0E97E00465081 /* AlertDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26557131DB0E97E00465081 /* AlertDemoUITests.swift */; };
-		D279F9151DB6152E0005BD7F /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279F9131DB6152E0005BD7F /* AlertVC.swift */; };
-		D279F9161DB6152E0005BD7F /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D279F9141DB6152E0005BD7F /* AlertVC.xib */; };
+		D26557261DB0EC7800465081 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26557231DB0EC7800465081 /* AlertVC.swift */; };
+		D26557271DB0EC7800465081 /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26557241DB0EC7800465081 /* AlertVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,8 @@
 		D265570F1DB0E97E00465081 /* AlertDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26557131DB0E97E00465081 /* AlertDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDemoUITests.swift; sourceTree = "<group>"; };
 		D26557151DB0E97E00465081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D279F9131DB6152E0005BD7F /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertVC.swift; path = ../Alert/AlertVC/AlertVC.swift; sourceTree = "<group>"; };
-		D279F9141DB6152E0005BD7F /* AlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertVC.xib; path = ../Alert/AlertVC/AlertVC.xib; sourceTree = "<group>"; };
+		D26557231DB0EC7800465081 /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertVC.swift; path = ../../Alert/AlertVC/AlertVC.swift; sourceTree = "<group>"; };
+		D26557241DB0EC7800465081 /* AlertVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertVC.xib; path = ../../Alert/AlertVC/AlertVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +133,8 @@
 		D26557211DB0EC5200465081 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				D279F9131DB6152E0005BD7F /* AlertVC.swift */,
-				D279F9141DB6152E0005BD7F /* AlertVC.xib */,
+				D26557231DB0EC7800465081 /* AlertVC.swift */,
+				D26557241DB0EC7800465081 /* AlertVC.xib */,
 			);
 			name = Alert;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D26556FE1DB0E97E00465081 /* LaunchScreen.storyboard in Resources */,
-				D279F9161DB6152E0005BD7F /* AlertVC.xib in Resources */,
+				D26557271DB0EC7800465081 /* AlertVC.xib in Resources */,
 				D26556FB1DB0E97E00465081 /* Assets.xcassets in Resources */,
 				D26556F91DB0E97E00465081 /* Main.storyboard in Resources */,
 			);
@@ -277,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D279F9151DB6152E0005BD7F /* AlertVC.swift in Sources */,
+				D26557261DB0EC7800465081 /* AlertVC.swift in Sources */,
 				D26556F61DB0E97E00465081 /* ViewController.swift in Sources */,
 				D26556F41DB0E97E00465081 /* AppDelegate.swift in Sources */,
 			);

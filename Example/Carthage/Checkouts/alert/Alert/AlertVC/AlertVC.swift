@@ -8,46 +8,43 @@
 
 import UIKit
 
-public enum AlertType {
+enum AlertType {
     
-    case Error
-    case ErrorCancel
-    case Success
-    case RedAlert
+    case Error, ErrorCancel, Success, RedAlert
 }
 
-public class AlertVC: UIViewController {
+class AlertVC: UIViewController {
 
-    public static var alertShown = false
+    static var alertShown = false
     
-    public var cornerRadius : CGFloat = 7.0
-    public var canBeDismissedFromBackground:Bool = false
+    var cornerRadius : CGFloat = 7.0
+    var canBeDismissedFromBackground:Bool = false
 
     //Param vars
-    public var iconImage:UIImage?
-    public var labelText:String = ""
-    public var subLabelText:String = ""
-    public var extraSubLabelText:String = ""
-    public var forcedAlert:Bool = false
+    var iconImage:UIImage?
+    var labelText:String = ""
+    var subLabelText:String = ""
+    var extraSubLabelText:String = ""
+    var forcedAlert:Bool = false
     
-    public var type: AlertType = AlertType.Error
-    public var okButtonText:String = "OK"
-    public var okCompletion: (() -> Void)?
-    public var cancelButtonText:String = "Cancel"
-    public var cancelCompletion: (() -> Void)?
-    public var bottomExtraButtonText:String = ""
-    public var bottomExtraButtonCompletion: (() -> Void)?
-    public var shouldShowBottomExtraButton = false
+    var type: AlertType = AlertType.Error
+    var okButtonText:String = "OK"
+    var okCompletion: (() -> Void)?
+    var cancelButtonText:String = "Cancel"
+    var cancelCompletion: (() -> Void)?
+    var bottomExtraButtonText:String = ""
+    var bottomExtraButtonCompletion: (() -> Void)?
+    var shouldShowBottomExtraButton = false
     
-    public var labelFont: UIFont?
-    public var subLabelFont: UIFont?
-    public var extraSubLabelFont: UIFont?
-    public var buttonFont: UIFont?
-    public var bottomExtraButtonFont: UIFont?
+    var labelFont: UIFont?
+    var subLabelFont: UIFont?
+    var extraSubLabelFont: UIFont?
+    var buttonFont: UIFont?
+    var bottomExtraButtonFont: UIFont?
     
-    public var backgroundColor: UIColor = UIColor.white
-    public var okButtonBackgroundColor: UIColor = UIColor.white
-    public var cancelButtonBackgroundColor: UIColor = UIColor.white
+    var backgroundColor: UIColor = UIColor.white
+    var okButtonBackgroundColor: UIColor = UIColor.white
+    var cancelButtonBackgroundColor: UIColor = UIColor.white
     
     //UI
     @IBOutlet weak var imageView: UIImageView!
@@ -127,7 +124,7 @@ public class AlertVC: UIViewController {
         alert.showAlert()
     }
     
-    public func showError(message:String) {
+    public func showError(message:String, forced:Bool) {
         
         self.showForceAlert(title: message, okTitle: nil, cancelTitle: nil, okCompletion: nil, cancelCompletion: nil)
     }
@@ -157,7 +154,7 @@ public class AlertVC: UIViewController {
         }
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
