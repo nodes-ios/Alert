@@ -67,6 +67,29 @@ public class AlertVC: UIViewController {
     @IBOutlet weak var subLabelHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var subLabelBottomConstraint: NSLayoutConstraint!
     
+    convenience init() {
+        self.init(nibName: "AlertVC", bundle: Bundle(for: AlertVC.self))
+    }
+    
+    override private init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    @available(*, unavailable)
+    required public init?(coder aDecoder: NSCoder) {
+        return nil
+    }
+    
+    public static func showAlertInVC(caller: UIViewController) {
+        
+        let podBundle = Bundle(for: AlertVC.self)
+        
+        let bundleURL = podBundle.url(forResource: "Alert", withExtension: "bundle")
+        let bundle = Bundle(url: bundleURL!)!
+        
+        let vc = AlertVC.init(nibName: "AlertVC", bundle: bundle)
+        caller.present(vc, animated: true, completion: nil)
+    }
     
     //MARK: init Helpers
     public func setupWith(title:String?, subText:String?, image:UIImage?, okTitle:String?, cancelTitle:String?, bottomExtraButtonTitle:String?, forced:Bool, okCompletion:(() -> Void)?, cancelCompletion:(() -> Void)?, bottomExtraButtonCompletion:(() -> Void)?, backgroundColor: UIColor?, buttonColors: UIColor?) {
